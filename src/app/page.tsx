@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, projects, skills, certifications, education } from "@/lib/content";
+import { site, projects, certifications, education } from "@/lib/content";
 import { Card, Pill } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { GlitchText } from "@/components/GlitchText";

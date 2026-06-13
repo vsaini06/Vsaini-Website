@@ -8,10 +8,7 @@ import { EffectsLayer } from "@/components/effects/EffectsLayer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vaibhavsaini-portfolio.vercel.app"),
-  title: {
-    default: `${site.name} — ${site.headline}`,
-    template: `%s — ${site.name}`,
-  },
+  title: "Vaibhav Saini · AI & Software Engineer",
   description: site.subheadline,
   keywords: site.keywords,
   applicationName: `${site.name} Portfolio`,

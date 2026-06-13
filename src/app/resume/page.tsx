@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, projects, education, certifications, skills } from "@/lib/content";
+import { site, projects, education, certifications, skills, experience } from "@/lib/content";
 import { Card, Pill, SectionTitle } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 
@@ -42,12 +42,37 @@ export default function ResumePage() {
         <Card>
           <h3 className="text-lg font-semibold">Summary</h3>
           <p className="mt-3 text-neutral-200">
-            I build secure, scalable AI systems with a strong focus on retrieval, observability, and clean backend architecture.
-            My work includes SecRAG (semantic retrieval + vector search) and PulseScore (monitoring-first inference systems).
+            Early career AI-focused Software Engineer who believes in building fast, resilient, and secure systems.
+            Focused on user empathy, latency awareness, handling failure modes gracefully, and making AI output trustworthy.
+            Available for full-time employment on OPT.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {site.keywords.map((k) => (
               <Pill key={k}>{k}</Pill>
+            ))}
+          </div>
+        </Card>
+      </Reveal>
+
+      <Reveal>
+        <Card>
+          <h3 className="text-lg font-semibold">Experience</h3>
+          <div className="mt-4 space-y-4">
+            {experience.map((e) => (
+              <div key={e.company} className="rounded-xl border border-neutral-800 bg-neutral-950/50 p-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <div className="font-semibold">{e.role}</div>
+                    <div className="text-sm text-neutral-300">{e.company}</div>
+                  </div>
+                  <div className="font-mono text-xs text-neutral-400">{e.when}</div>
+                </div>
+                <ul className="mt-2 space-y-1 text-sm text-neutral-200">
+                  {e.bullets.map((b) => (
+                    <li key={b}>• {b}</li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </Card>

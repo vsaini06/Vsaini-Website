@@ -140,10 +140,10 @@ export const education = [
 ];
 
 export const certifications = [
-  "AWS Certified Cloud Practitioner – Amazon Web Services (July 2025)",
-  "AWS Academy Graduate – Cloud Architecting (April 2025)",
-  "Machine Learning Specialization – DeepLearning.AI (January 2026)",
-  "Generative AI with LLMs – DeepLearning.AI (February 2026)",
+  "AWS Certified Cloud Practitioner - Amazon Web Services (July 2025)",
+  "AWS Academy Graduate - Cloud Architecting (April 2025)",
+  "Machine Learning Specialization - DeepLearning.AI (January 2026)",
+  "Generative AI with LLMs - DeepLearning.AI (February 2026)",
 ];
 
 export const experience = [

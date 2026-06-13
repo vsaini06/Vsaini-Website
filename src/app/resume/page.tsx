@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, projects, education, certifications, skills, experience } from "@/lib/content";
+import { site, projects, education, certifications, skills, experience, summary } from "@/lib/content";
 import { Card, Pill, SectionTitle } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 
@@ -41,11 +41,7 @@ export default function ResumePage() {
       <Reveal>
         <Card>
           <h3 className="text-lg font-semibold">Summary</h3>
-          <p className="mt-3 text-neutral-200">
-            Early career AI-focused Software Engineer who believes in building fast, resilient, and secure systems.
-            Focused on user empathy, latency awareness, handling failure modes gracefully, and making AI output trustworthy.
-            Available for full-time employment on OPT.
-          </p>
+          <p className="mt-3 text-neutral-200">{summary}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {site.keywords.map((k) => (
               <Pill key={k}>{k}</Pill>

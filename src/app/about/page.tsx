@@ -5,7 +5,7 @@ import { Card, Pill, SectionTitle } from "@/components/ui";
 export default function AboutPage() {
   return (
     <div className="space-y-8">
-      <SectionTitle title="About" subtitle="Software and AI engineer" />
+      <SectionTitle title="About" subtitle="AI Engineer | Software Engineer" />
 
       <Card>
         <p className="text-neutral-200">
@@ -13,8 +13,8 @@ export default function AboutPage() {
         </p>
 
         <div className="mt-6 flex flex-wrap gap-4">
-          <Link href={site.links.linkedin} className="font-mono text-sm text-cyan-300 hover:underline">Linkedin →</Link>
-          <Link href={site.links.github} className="font-mono text-sm text-green-300 hover:underline">Github →</Link>
+          <Link href={site.links.linkedin} className="font-mono text-sm text-cyan-300 hover:underline">LinkedIn →</Link>
+          <Link href={site.links.github} className="font-mono text-sm text-green-300 hover:underline">GitHub →</Link>
           <Link href={site.links.resume} className="font-mono text-sm text-neutral-200 hover:underline">Resume →</Link>
         </div>
       </Card>

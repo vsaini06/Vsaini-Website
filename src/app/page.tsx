@@ -91,21 +91,6 @@ export default function Home() {
           </Card>
         </section>
       </Reveal>
-
-      <Reveal>
-        <section className="grid gap-6 md:grid-cols-2">
-          {Object.entries(skills).slice(0, 8).map(([group, items]) => (
-            <Card key={group}>
-              <h3 className="text-lg font-semibold">{group}</h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {items.map((x) => (
-                  <Pill key={x}>{x}</Pill>
-                ))}
-              </div>
-            </Card>
-          ))}
-        </section>
-      </Reveal>
     </div>
   );
 }

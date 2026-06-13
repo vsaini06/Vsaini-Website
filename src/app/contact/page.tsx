@@ -18,8 +18,8 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-6 flex flex-wrap gap-4">
-          <Link className="font-mono text-sm text-cyan-300 hover:underline" href={site.links.linkedin}>Linkedin →</Link>
-          <Link className="font-mono text-sm text-green-300 hover:underline" href={site.links.github}>Github →</Link>
+          <Link className="font-mono text-sm text-cyan-300 hover:underline" href={site.links.linkedin}>LinkedIn →</Link>
+          <Link className="font-mono text-sm text-green-300 hover:underline" href={site.links.github}>GitHub →</Link>
           <Link className="font-mono text-sm text-neutral-200 hover:underline" href={site.links.resume}>Resume →</Link>
         </div>
       </Card>

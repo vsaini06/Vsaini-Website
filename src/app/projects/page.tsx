@@ -5,7 +5,7 @@ import { Card, Pill, SectionTitle } from "@/components/ui";
 export default function ProjectsPage() {
   return (
     <div className="space-y-6">
-      <SectionTitle title="Projects" subtitle="Case studies with design, tradeoffs, and next steps." />
+      <SectionTitle title="Projects" subtitle="Projects built with production standards and measurable outcomes." />
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
           <Card key={p.slug}>

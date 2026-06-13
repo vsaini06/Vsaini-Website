@@ -5,7 +5,7 @@ import { Card, SectionTitle } from "@/components/ui";
 export default function ContactPage() {
   return (
     <div className="space-y-6">
-      <SectionTitle title="Contact" subtitle="Email or Linkedin" />
+      <SectionTitle title="Contact" subtitle="Email or LinkedIn" />
       <Card>
         <p className="text-neutral-200">
           Email:{" "}

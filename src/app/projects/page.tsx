@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                 Info →
               </Link>
               {p.links.map((l) => (
-                <Link key={l.href} href={l.href} className="font-mono text-sm text-green-300 hover:underline">
+                <Link key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-green-300 hover:underline">
                   {l.label} →
                 </Link>
               ))}

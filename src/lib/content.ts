@@ -8,7 +8,7 @@ export const site = {
   phone: "+1(623)261-0432",
   links: {
     linkedin: "https://www.linkedin.com/in/vaibhav-saini-050b30324/",
-    github: "https://github.com/vsain01",
+    github: "https://github.com/vsaini06",
     resume: "/resume.pdf",
   },
   keywords: [
@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Deployed via Docker Compose with a React frontend",
     ],
     tech: ["FastAPI", "ChromaDB", "Sentence-Transformers", "Python", "NumPy", "React", "Docker"],
-    links: [{ label: "GitHub Repo", href: "https://github.com/vsain01/secrag" }],
+    links: [{ label: "GitHub Repo", href: "https://github.com/vsaini06/secrag" }],
     sections: [
       {
         title: "Architecture",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       "Docker-based deployment with clean module separation",
     ],
     tech: ["FastAPI", "Python", "ML Deployment", "Docker"],
-    links: [{ label: "GitHub Repo", href: "https://github.com/vsain01/pulsescore" }],
+    links: [{ label: "GitHub Repo", href: "https://github.com/vsaini06/pulsescore" }],
     sections: [
       {
         title: "Problem",

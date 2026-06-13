@@ -9,10 +9,7 @@ export default function AboutPage() {
 
       <Card>
         <p className="text-neutral-200">
-        Software and AI engineer, and a cybersecurity and cloud student, focused on building secure, scalable systems. I design
-        backend architectures, real-time AI pipelines, and semantic retrieval systems with an emphasis on reliability and clean
-        user experience. I actively explore machine learning deployment, cloud infrastructure, and security-first design. My goal
-        is to build practical, innovative AI solutions that are secure and user-focused.
+        I’m an early career AI-focused Software Engineer who believes the best systems are fast, resilient, and secure; but I never stop thinking about whether something feels intuitive to the person on the other end. I’m a curious, quick learner who picks up new tools fast and goes deep when it matters, caring about latency, failure modes, and whether AI output can actually be trusted. I collaborate well across in person and remote teams, working efficiently no matter the setup. On OPT, looking for a full-time role.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-4">

@@ -2,7 +2,7 @@ export const site = {
   name: "Vaibhav Saini",
   headline: "AI Engineer | Software Engineer",
   subheadline:
-    "MS IT Security @ ASU · Python · Java · FastAPI · LLMs · RAG · ChromaDB · SQL · Kubernetes · Docker",
+    "MS IT Security @ ASU · Python · Java · FastAPI · LLMs · RAG · ChromaDB · SQL · CI/CD · Docker",
   location: "Sunnyvale, CA (Open to Remote/Hybrid)",
   email: "vsaini0601@gmail.com",
   phone: "+1(623)261-0432",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     slug: "secrag",
     title: "SecRAG",
     subtitle: "Hybrid BM25+Vector RAG pipeline with cross-encoder reranking",
-    oneLiner: "Production-grade document Q&A backend with 99.6% citation accuracy and 4.15/5 eval score.",
+    oneLiner: "Production-grade document Q&A backend with 99.6% citation accuracy and 4.15/5.00 eval score.",
     description:
       "Production-grade RAG backend built with FastAPI and ChromaDB. Uses hybrid BM25+dense retrieval with RRF fusion, a cross-encoder reranker (ms-marco-MiniLM-L-6-v2) to compress top-20 to top-5 results, and LLM-as-judge citation verification. Evaluated on a 48-question golden Q&A set against the BERT paper.",
     highlights: [

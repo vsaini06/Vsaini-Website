@@ -65,7 +65,7 @@ export const projects: Project[] = [
     title: "SecRAG Pro",
     subtitle: "RAG pipeline with intelligent LLM cost routing",
     oneLiner:
-      "62.3% cost reduction on answer generation with 99.6% citation accuracy — two production systems integrated into one.",
+      "62.3% cost reduction on answer generation with 99.6% citation accuracy; two production systems integrated into one.",
     description:
       "SecRAG Pro integrates two production systems: SecRAG (hybrid RAG pipeline with citation verification) and LLM Cost Autopilot (intelligent model routing layer). Every document query is classified by complexity and routed to the cheapest capable model automatically. Simple factual lookups go to Llama 3.2 for free. Complex synthesis questions route to Claude Sonnet or GPT-4o. The system decides autonomously with no per-query configuration.",
     highlights: [
@@ -75,7 +75,7 @@ export const projects: Project[] = [
       "RandomForest complexity classifier trained on 221 labeled prompts with 97%+ accuracy",
       "Three-tier routing: Llama 3.2 (free local), GPT-4o Mini/Claude Haiku, Claude Sonnet/GPT-4o",
       "Async GPT-4o quality verifier with auto-escalation when cheap model underperforms",
-      "Hot-reloadable routing config via YAML — no server restart needed to change model assignments",
+      "Hot-reloadable routing config via YAML; no server restart needed to change model assignments",
       "Full cost observability: actual cost, hypothetical all-GPT-4o cost, and savings tracked per request",
     ],
     tech: [
@@ -112,7 +112,7 @@ export const projects: Project[] = [
       {
         title: "Results",
         body: [
-          "513 requests across all tiers: GPT-4o Mini handled 41.3%, Llama 3.2 (free) handled 28.3%, GPT-4o handled 19.3%, Claude Sonnet handled 11.1%. Total cost $1.25 vs $3.33 hypothetical — $2.07 saved at 62.3% reduction.",
+          "513 requests across all tiers: GPT-4o Mini handled 41.3%, Llama 3.2 (free) handled 28.3%, GPT-4o handled 19.3%, Claude Sonnet handled 11.1%. Total cost $1.25 vs $3.33 hypothetical; $2.07 saved at 62.3% reduction.",
         ],
       },
     ],
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "RandomForest classifier with 97%+ accuracy trained on 221 hand-labeled prompts across 3 tiers",
       "12 engineered features including keyword hits, scale number detection, and instruction verb count",
       "Async GPT-4o quality verifier with configurable score threshold and auto-escalation",
-      "Hot-reloadable YAML routing config via PUT /v1/routing-config — no redeploy needed",
+      "Hot-reloadable YAML routing config via PUT /v1/routing-config; no redeploy needed",
       "Provider fallback: if primary model fails, automatically retries with fallback model",
       "SQLite logging with full cost, latency, quality score, and escalation tracking per request",
       "Streamlit dashboard with 4 pages: cost overview, routing breakdown, quality scores, live config editor",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
       "Hybrid BM25+dense retrieval with RRF fusion for improved recall over single-strategy search",
       "Cross-encoder reranker (ms-marco-MiniLM-L-6-v2) narrows top-20 candidates to top-5",
       "LLM-as-judge citation verification pipeline achieved 99.6% citation accuracy",
-      "Evaluated on a 48-question golden Q&A set — scored 4.15/5.0",
+      "Evaluated on a 48-question golden Q&A set; scored 4.15/5.0",
       "Three chunking strategies with ChromaDB deduplication for clean ingestion",
       "Deployed via Docker Compose with a React frontend",
     ],
@@ -262,10 +262,10 @@ export const education = [
 ];
 
 export const certifications = [
-  "AWS Certified Cloud Practitioner - Amazon Web Services (July 2025)",
-  "AWS Academy Graduate - Cloud Architecting (April 2025)",
-  "Machine Learning Specialization - DeepLearning.AI (January 2026)",
-  "Generative AI with LLMs - DeepLearning.AI (February 2026)",
+  "AWS Certified Cloud Practitioner: Amazon Web Services (July 2025)",
+  "AWS Academy Graduate: Cloud Architecting (April 2025)",
+  "Machine Learning Specialization: DeepLearning.AI (January 2026)",
+  "Generative AI with LLMs: DeepLearning.AI (February 2026)",
 ];
 
 export const experience = [

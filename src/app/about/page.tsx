@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, skills } from "@/lib/content";
+import { site, skills, summary } from "@/lib/content";
 import { Card, Pill, SectionTitle } from "@/components/ui";
 
 export default function AboutPage() {
@@ -9,7 +9,7 @@ export default function AboutPage() {
 
       <Card>
         <p className="text-neutral-200">
-        I’m an early career AI-focused Software Engineer who believes the best systems are fast, resilient, and secure; but I never stop thinking about whether something feels intuitive to the person on the other end. I’m a curious, quick learner who picks up new tools fast and goes deep when it matters, caring about latency, failure modes, and whether AI output can actually be trusted. I collaborate well across in person and remote teams, working efficiently no matter the setup. On OPT, looking for a full-time role.
+        {summary}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-4">
@@ -17,6 +17,11 @@ export default function AboutPage() {
           <Link href={site.links.github} className="font-mono text-sm text-green-300 hover:underline">GitHub →</Link>
           <Link href={site.links.resume} className="font-mono text-sm text-neutral-200 hover:underline">Resume →</Link>
         </div>
+      </Card>
+
+      <Card>
+        <h3 className="text-lg font-semibold">Research and evaluation</h3>
+        <p className="mt-3 text-neutral-200">My graduate studies in information technology and security included work on monitoring and logging. My independent AI engineering work applies research-style experimentation to retrieval, citation verification, inference cost, and multimodal scene understanding. Specific claims and reported metrics are documented on the corresponding project pages.</p>
       </Card>
 
       <div className="grid gap-6 md:grid-cols-2">

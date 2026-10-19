@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 export default function ResumePage() {
   return (
     <div className="space-y-8">
-      <SectionTitle title="Resume" subtitle="Online resume view." />
+      <SectionTitle title="Resume" subtitle="Experience and selected work, aligned with the uploaded October 2026 resume." />
 
       <Reveal>
         <Card>
@@ -78,7 +78,7 @@ export default function ResumePage() {
         <Card>
           <h3 className="text-lg font-semibold">Projects</h3>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
-            {projects.map((p) => (
+            {projects.filter((p) => ["homhive", "secrag-pro"].includes(p.slug)).map((p) => (
               <div key={p.slug} className="rounded-xl border border-neutral-800 bg-neutral-950/50 p-4">
                 <div className="flex items-start justify-between gap-3">
                   <div>

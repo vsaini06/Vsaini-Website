@@ -1,9 +1,9 @@
 export const site = {
   name: "Vaibhav Saini",
-  headline: "AI Engineer | Software Engineer",
+  headline: "Software Engineer | Applied AI and Backend Systems",
   subheadline:
-    "MS IT Security @ ASU · Python · Java · FastAPI · LLMs · RAG · ChromaDB · SQL · CI/CD · Docker",
-  location: "Sunnyvale, CA (Open to Remote/Hybrid)",
+    "M.S. in Information Technology, Arizona State University | AI Engineering, Backend Development and Full Stack Systems",
+  location: "Sunnyvale, California",
   email: "vsaini0601@gmail.com",
   phone: "+1(623)261-0432",
   links: {
@@ -12,40 +12,14 @@ export const site = {
     resume: "/resume.pdf",
   },
   keywords: [
-    "Python",
-    "Java",
-    "FastAPI",
-    "Node.js",
-    "TypeScript",
-    "React",
-    ".NET",
-    "Angular",
-    "LLMs",
-    "RAG",
-    "LangChain",
-    "AWS",
-    "Azure",
-    "CI/CD",
-    "Docker",
-    "PostgreSQL",
-    "DynamoDB",
-    "ChromaDB",
-    "Vector Database",
-    "SQL Server",
-    "Redis",
-    "JWT Auth",
-    "OWASP",
-    "LLM Routing",
-    "Cost Optimization",
-    "scikit-learn",
-    "Ollama",
-    "Anthropic",
-    "OpenAI",
+    "Python", "FastAPI", "TypeScript", "React", "Next.js", "C#", "ASP.NET Core",
+    "Agentic AI", "Multimodal AI", "RAG", "Hybrid Retrieval", "LLM Routing", "Model Evaluation",
+    "PostgreSQL", "Docker", "AWS", "Azure", "Redis", "Observability", "RBAC",
   ],
 };
 
 export const summary =
-  "I'm an early career AI-focused Software Engineer who believes the best systems are fast, resilient, and secure; but I never stop thinking about whether something feels intuitive to the person on the other end. I'm a curious, quick learner who picks up new tools fast and goes deep when it matters, caring about latency, failure modes, and whether AI output can actually be trusted. I collaborate well across in person and remote teams, working efficiently no matter the setup. On OPT, looking for a full-time role.";
+  "I am a software engineer with experience building backend services, AI applications, and full stack products. My recent work includes retrieval systems that verify their sources, model routing that reduces inference costs, and household intelligence software that turns visual observations into useful actions. I work primarily with Python, FastAPI, TypeScript, and cloud infrastructure, and I bring a security focused perspective from my master’s degree at Arizona State University.";
 
 export type Project = {
   slug: string;
@@ -61,22 +35,63 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "homhive",
+    title: "HomHive",
+    subtitle: "Household intelligence platform | NVIDIA and Nebius AI Hackathon | September 2026 to present",
+    oneLiner: "A household assistant that interprets observations, tracks changes over time, and plans practical next steps.",
+    description: "HomHive helps people understand what needs attention around their home. Instead of treating a photo as an isolated request, the system keeps track of household observations, identifies potential tasks, and updates recommendations when circumstances change. I built the backend, evaluation workflow, and planning system for the NVIDIA and Nebius AI Hackathon.",
+    highlights: [
+      "Designed household entity, observation, and task models with persistent history using Python, FastAPI, PostgreSQL, SQLAlchemy, and Alembic.",
+      "Reached 348 passing backend tests at the milestone reported on my October 2026 resume.",
+      "Improved scene entity recall from 47.5% to 71.2% and micro F1 from 58.3% to 71.8% on a human labeled development set containing 59 entities.",
+      "Integrated Nebius perception, NVIDIA Nemotron reasoning, and Tavily research into a workflow that connects visual evidence to suggested actions.",
+      "Built a planner that accounts for available time, household presence, task priority, feasibility, and quiet hours. Demonstrated how a plan changes when the available time drops from 20 minutes to 5 minutes.",
+      "Developed and deployed the application with Next.js, Docker, Vercel, Railway, and PostgreSQL.",
+    ],
+    tech: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic", "Next.js", "Docker", "Nebius AI", "NVIDIA Nemotron", "Tavily", "Vercel", "Railway", "pytest"],
+    links: [
+      { label: "GitHub Repo", href: "https://github.com/vsaini06/HomHive" },
+    ],
+    sections: [
+      {
+        title: "Why I built it",
+        body: [
+          "Household work is easy to overlook until it becomes urgent. HomHive explores whether software can recognize emerging needs from everyday evidence and help people decide what to do, without requiring custom cameras or sensors.",
+        ],
+      },
+      {
+        title: "System design",
+        body: [
+          "The application converts photos and other inputs into observations associated with household entities. Those observations are stored over time, allowing the system to reason about changes rather than relying on one snapshot. Tasks are tracked separately from observations so that users can review progress and update their status.",
+          "Planning combines household state with practical constraints such as time, presence, priority, and quiet hours. NVIDIA Nemotron supports reasoning, while Tavily provides external research when a situation needs additional context.",
+        ],
+      },
+      {
+        title: "Evaluation and results",
+        body: [
+          "I evaluated scene understanding against a human labeled development set of 59 entities. Scene entity recall rose from 47.5% to 71.2%, and micro F1 rose from 58.3% to 71.8%. These are development evaluation results, not a claim of accuracy in all homes or environments.",
+          "The October 2026 resume records 348 passing backend tests. The repository may have progressed beyond that milestone.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "secrag-pro",
     title: "SecRAG Pro",
-    subtitle: "RAG pipeline with intelligent LLM cost routing",
+    subtitle: "Retrieval augmented generation with adaptive model routing",
     oneLiner:
-      "62.3% cost reduction on answer generation with 99.6% citation accuracy; two production systems integrated into one.",
+      "Combined source grounded retrieval with model selection to reduce inference cost without sacrificing answer quality.",
     description:
-      "SecRAG Pro integrates two production systems: SecRAG (hybrid RAG pipeline with citation verification) and LLM Cost Autopilot (intelligent model routing layer). Every document query is classified by complexity and routed to the cheapest capable model automatically. Simple factual lookups go to Llama 3.2 for free. Complex synthesis questions route to Claude Sonnet or GPT-4o. The system decides autonomously with no per-query configuration.",
+      "SecRAG Pro combines document retrieval, citation verification, and a model routing service. The retrieval pipeline finds relevant passages using both keyword and semantic search, then reranks results before generating an answer. A separate routing component estimates question complexity and selects an appropriate language model. I evaluated the system for cost, answer quality, citation accuracy, and reliability.",
     highlights: [
-      "62.3% cost reduction on answer generation vs all-GPT-4o routing across 513 real requests",
-      "99.6% citation accuracy verified by LLM-as-judge pipeline",
-      "4.15/5.0 average answer quality on 48-question golden eval set",
-      "RandomForest complexity classifier trained on 221 labeled prompts with 97%+ accuracy",
-      "Three-tier routing: Llama 3.2 (free local), GPT-4o Mini/Claude Haiku, Claude Sonnet/GPT-4o",
-      "Async GPT-4o quality verifier with auto-escalation when cheap model underperforms",
-      "Hot-reloadable routing config via YAML; no server restart needed to change model assignments",
-      "Full cost observability: actual cost, hypothetical all-GPT-4o cost, and savings tracked per request",
+      "Reduced inference cost by 62.3% compared with an all GPT-4o baseline across 513 evaluation requests.",
+      "Measured 99.6% citation accuracy on a 50 question evaluation set using source and answer verification.",
+      "Recorded an average answer quality score of 4.15 out of 5 during evaluation.",
+      "Trained a RandomForest classifier on 221 labeled prompts to assign question complexity, with more than 97% reported accuracy.",
+      "Routed requests across local Llama 3.2, GPT-4o Mini, Claude Haiku, Claude Sonnet, and GPT-4o.",
+      "Added asynchronous response verification and escalation when a lower cost model failed quality checks.",
+      "Made routing assignments configurable through YAML without requiring a service restart.",
+      "Logged request costs, model selections, and estimated savings to make routing decisions measurable.",
     ],
     tech: [
       "FastAPI",
@@ -177,14 +192,14 @@ export const projects: Project[] = [
     title: "SecRAG",
     subtitle: "Hybrid BM25+Vector RAG pipeline with cross-encoder reranking",
     oneLiner:
-      "Production-grade document Q&A backend with 99.6% citation accuracy and 4.15/5.00 eval score.",
+      "Hybrid document Q&A with citation verification and a measured quality evaluation.",
     description:
       "Production-grade RAG backend built with FastAPI and ChromaDB. Uses hybrid BM25+dense retrieval with RRF fusion, a cross-encoder reranker (ms-marco-MiniLM-L-6-v2) to compress top-20 to top-5 results, and LLM-as-judge citation verification. Evaluated on a 48-question golden Q&A set against the BERT paper.",
     highlights: [
       "Hybrid BM25+dense retrieval with RRF fusion for improved recall over single-strategy search",
       "Cross-encoder reranker (ms-marco-MiniLM-L-6-v2) narrows top-20 candidates to top-5",
-      "LLM-as-judge citation verification pipeline achieved 99.6% citation accuracy",
-      "Evaluated on a 48-question golden Q&A set; scored 4.15/5.0",
+      "Grounded answer verification and citation checking in a 50-question evaluation set reported in the resume",
+      "Evaluated grounded answer quality; reported mean quality score of 4.15/5",
       "Three chunking strategies with ChromaDB deduplication for clean ingestion",
       "Deployed via Docker Compose with a React frontend",
     ],
@@ -250,20 +265,20 @@ export const education = [
   {
     school: "Arizona State University",
     program: "M.S. in Information Technology (Security)",
-    when: "May 2026",
+    when: "2026",
     bullets: ["GPA: 3.97/4.00"],
   },
   {
     school: "MMDU, Ambala, Haryana, India",
-    program: "Bachelors in Computer Science (Data Science)",
-    when: "June 2023",
+    program: "B.E. in Computer Science (Data Science)",
+    when: "2023",
     bullets: ["GPA: 7.62/10.00"],
   },
 ];
 
 export const certifications = [
   "AWS Certified Cloud Practitioner: Amazon Web Services (July 2025)",
-  "AWS Academy Graduate: Cloud Architecting (April 2025)",
+  "AWS Academy Cloud Architect and Solutions Engineer: Amazon Web Services (2025)",
   "Machine Learning Specialization: DeepLearning.AI (January 2026)",
   "Generative AI with LLMs: DeepLearning.AI (February 2026)",
 ];
@@ -272,20 +287,20 @@ export const experience = [
   {
     role: "Software Engineer",
     company: "Badoliasoft",
-    when: "Oct 2023 - Jun 2024",
+    when: "June 2023 - July 2024",
     bullets: [
-      "Built JWT HMAC-SHA512 authentication with role-based access control (RBAC) for a fintech platform serving real users",
-      "Implemented real-time notifications using SignalR and RabbitMQ across 200+ C# files and 10 REST controllers",
-      "Optimized file delivery via Azure Blob CDN integration and improved session performance with Redis caching",
-      "Delivered full-stack features using Angular and .NET 8 in a production environment",
+      "Implemented JWT authentication with HMAC-SHA512, three-tier RBAC, token blacklisting and IP-based rate limiting for a fintech platform supporting 100+ users, with zero reported unauthorized access incidents after deployment.",
+      "Built real-time SignalR workflows with RabbitMQ fanout messaging; integrated Azure Blob Storage and CDN, reducing average file-delivery latency by 40%.",
+      "Added Redis distributed caching, structured logging and global exception handling, reducing database load by 35%.",
+      "Contributed to an Angular + .NET 8 full-stack application spanning 200+ C# files and 10 REST controllers.",
+      "Owned authentication, messaging, caching and reliability features as part of a small team delivering a greenfield fintech platform.",
     ],
   },
 ];
 
 export const skills = {
-  "Languages & Frameworks": ["Python", "Java", "FastAPI", "TypeScript", "Node.js", "React", ".NET", "Angular"],
-  "AI & ML": ["LLMs", "RAG", "Embeddings", "Sentence-Transformers", "Fine-Tuning", "Prompt Engineering", "LangChain", "scikit-learn"],
-  "Cloud & DevOps": ["AWS", "Azure", "Docker", "CI/CD"],
-  "Databases": ["PostgreSQL", "DynamoDB", "Pinecone", "ChromaDB", "SQL Server", "Redis", "SQLite"],
-  "Security & Monitoring": ["Splunk", "Wireshark", "JWT", "RBAC", "OWASP"],
+  "Languages & Frameworks": ["Python", "C#", "Java", "TypeScript", "JavaScript", "SQL", "FastAPI", "ASP.NET Core", "Next.js", "React", "Angular", "Node.js", "REST APIs", "GraphQL"],
+  "AI & ML": ["Generative AI", "Agentic AI", "Multimodal AI", "LLMs", "RAG", "LLM Routing", "BM25", "Dense Retrieval", "Reciprocal Rank Fusion", "Cross-Encoder Reranking", "LLM-as-Judge", "Model Evaluation", "NVIDIA Nemotron", "Nebius AI", "Tavily", "Ollama"],
+  "Cloud, Data & Infrastructure": ["AWS", "Azure", "PostgreSQL", "AWS RDS", "SQLAlchemy", "Alembic", "Redis", "Docker", "Railway", "Vercel", "RabbitMQ", "SignalR"],
+  "Engineering & Security": ["Distributed Systems", "API Design", "Object-Oriented Design", "Data Structures & Algorithms", "JWT", "RBAC", "Testing", "Debugging", "Observability", "Structured Logging", "CI/CD", "Git", "GitHub"],
 };
